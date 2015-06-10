@@ -1,6 +1,6 @@
-# HTTPS certificates for localhost development
+# HTTPS certs for localhost development
 
-HTTPS certs for localhost.daplie.com for use for everyone in testing and development.
+HTTPS certificates for `localhost.daplie.com`, free for anyone to use in testing and development.
 
 ## QuickStart
 
