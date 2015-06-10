@@ -4,9 +4,29 @@ HTTPS certs for localhost.daplie.com for use for everyone in testing and develop
 
 ## TL;DR
 
+```bash
+git clone https://github.com/Daplie/localhost.daplie.com-certificates.git ./certs
+```
+
+If your webserver requires a PEM bundle use `./certs/bundle.pem`.
+
+If you webserver requires an array of CA certificates and a server certificate, use these instead:
+
+* `./certs/server/my-server.crt.pem`
+* `./certs/ca/intermediate.crt.pem`
+* `./certs/ca/root.crt.pem`
+
+You will also need the server private key `./certs/server/my-server.key.pem`.
+
+Examples:
+
+* node.js: TODO
+* caddy: TODO
+
 ## Screencast + Article
 
 https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/
+[![](https://i.imgur.com/F8aoJg5.png)](https://youtu.be/r92gqYHJc5c)
 
 ## How this was created
 
@@ -275,3 +295,5 @@ hw4EbNX/3aBd7YdStysVAq45pmp06drE57xNNB6pXE0zX5IJL4hmXXeXxx12E6nV
 ```
 cat my-server.crt.pem intermediate.crt.pem root.crt.pem > bundle.pem
 ```
+
+**Note**: The order *may* be important. I believe it *should* be from least to greatest authority as seen above.
