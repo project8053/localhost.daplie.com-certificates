@@ -2,7 +2,7 @@
 
 HTTPS certificates for `localhost.daplie.com`, free for anyone to use in testing and development.
 
-For the sake of keywords: most people (including myself) think of these as "SSL certificates" but they are, in fact, RSA keypairs used for TLS encryption.
+For the sake of keywords: most people (including myself) think of these as "SSL certificates" but they are, in fact, signed RSA keypairs used for TLS encryption.
 
 ## QuickStart
 
