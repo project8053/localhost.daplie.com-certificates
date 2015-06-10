@@ -201,9 +201,7 @@ QyTmfubJfT/S1IBFfwqLln/Kf3PGyOvoOYocFpkfHvzFrviqljDDIyfVWx7hQpE=
 
 #### Domain Name
 
-localhost.daplie.com
-
-Certificates have been issued
+`localhost.daplie.com`
 
 #### Server Certificate
 
