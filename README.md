@@ -2,7 +2,9 @@
 
 HTTPS certs for localhost.daplie.com for use for everyone in testing and development.
 
-## TL;DR
+## QuickStart
+
+If you've done this kind of thing before:
 
 ```bash
 git clone https://github.com/Daplie/localhost.daplie.com-certificates.git ./certs
@@ -25,8 +27,9 @@ Examples:
 
 ## Screencast + Article
 
-https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/
-[![](https://i.imgur.com/F8aoJg5.png)](https://youtu.be/r92gqYHJc5c)
+[![screencast thumbnail](https://i.imgur.com/F8aoJg5.png)](https://youtu.be/r92gqYHJc5c)
+
+<https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/>
 
 ## How this was created
 
