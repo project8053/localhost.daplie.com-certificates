@@ -25,6 +25,10 @@ Examples:
 * node.js: TODO
 * caddy: TODO
 
+<https://localhost.daplie.com> is an alias for <https://localhost> or <https://127.0.0.1>.
+
+The benefit of using this certificate for localhost development is that you will have the exact same security policies and APIs available in development as you would have in production.
+
 ## Screencast + Article
 
 [![screencast thumbnail](https://i.imgur.com/F8aoJg5.png)](https://youtu.be/r92gqYHJc5c)
