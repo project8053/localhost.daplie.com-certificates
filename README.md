@@ -20,7 +20,7 @@ I created a directory `~/Code/localhost.daplie.com-certificates` (this repositor
 ```bash
 mkdir -p certs/server
 openssl genrsa \
-  -out my-server.key.pem \
+  -out certs/server/my-server.key.pem \
   2048
 ```
 
