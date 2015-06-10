@@ -1,2 +1,3 @@
-# localhost.daplie.com-certificates
-HTTPS / TLS certs for localhost.daplie.com to be used in testing and development.
+# HTTPS certificates for development
+
+HTTPS certs for localhost.daplie.com for use for everyone in testing and development.
