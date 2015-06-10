@@ -33,9 +33,9 @@ The benefit of using this certificate for localhost development is that you will
 
 [![screencast thumbnail](https://i.imgur.com/F8aoJg5.png)](https://youtu.be/r92gqYHJc5c)
 
-[https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/](Create a CSR in PEM format for your HTTPS cert)
+[Create a CSR in PEM format for your HTTPS cert](https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
 
-[https://coolaj86.com/articles/how-to-examine-an-ssl-https-tls-cert/](Examine HTTPS Certs with OpenSSL in Terminal)
+[Examine HTTPS Certs with OpenSSL in Terminal](https://coolaj86.com/articles/how-to-examine-an-ssl-https-tls-cert/)
 
 ## How this was created
 
