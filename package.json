@@ -1,0 +1,34 @@
+{
+  "name": "localhost.daplie.com-certificates",
+  "version": "1.0.0",
+  "description": "HTTPS / TLS certs for localhost.daplie.com to be used in testing and development.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daplie/localhost.daplie.com-certificates.git"
+  },
+  "keywords": [
+    "https",
+    "ssl",
+    "localhost",
+    "self-signed",
+    "self",
+    "signed",
+    "cert",
+    "certs",
+    "certificates",
+    "tls",
+    "example",
+    "demo",
+    "easy"
+  ],
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.com/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Daplie/localhost.daplie.com-certificates/issues"
+  },
+  "homepage": "https://github.com/Daplie/localhost.daplie.com-certificates#readme"
+}

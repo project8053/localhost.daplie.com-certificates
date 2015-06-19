@@ -22,11 +22,6 @@ If you webserver requires an array of CA certificates and a server certificate, 
 
 You will also need the server private key `./certs/server/my-server.key.pem`.
 
-Examples:
-
-* node.js: TODO
-* caddy: TODO
-
 <https://localhost.daplie.com> is an alias for <https://localhost> or <https://127.0.0.1>.
 
 The benefit of using this certificate for localhost development is that you will have the exact same security policies and APIs available in development as you would have in production.
@@ -38,6 +33,75 @@ The benefit of using this certificate for localhost development is that you will
 [Create a CSR in PEM format for your HTTPS cert](https://coolaj86.com/articles/how-to-create-a-csr-for-https-tls-ssl-rsa-pems/)
 
 [Examine HTTPS Certs with OpenSSL in Terminal](https://coolaj86.com/articles/how-to-examine-an-ssl-https-tls-cert/)
+
+## Examples
+
+### node / io.js
+
+**Quick and Dirty:**
+
+```bash
+npm install --save-dev localhost.daplie.com-certificates
+```
+
+```javascript
+'use strict';
+
+var https = require('https');
+var server = https.createServer(require('localhost.daplie.com-certificates'));
+var port = process.argv[2] || 8443;
+
+server.on('request', function (req, res) {
+  res.end('[' + req.method + ']' + ' ' + req.url);
+});
+server.listen(port, function () {
+  console.log('Listening', server.address());
+});
+```
+
+<https://localhost.daplie.com:8443/>
+
+**DIY**
+
+Instead of simply requiring `localhost.daplie.com-certificates` you will clone the certs yourself
+and provide the options object.
+
+```bash
+git clone https://github.com/Daplie/localhost.daplie.com-certificates.git ./certs
+```
+
+```javascript
+var fs = require('fs');
+var path = require('path');
+var certsPath = path.join(__dirname, 'certs', 'server');
+var caCertsPath = path.join(__dirname, 'certs', 'ca');
+
+//
+// SSL Certificates
+//
+var options = {
+  key: fs.readFileSync(path.join(certsPath, 'my-server.key.pem'))
+, cert: fs.readFileSync(path.join(certsPath, 'my-server.crt.pem'))
+, ca: [
+    fs.readFileSync(path.join(caCertsPath, 'intermediate.crt.pem'))
+  , fs.readFileSync(path.join(caCertsPath, 'root.crt.pem'))
+  ]
+, requestCert: false
+, rejectUnauthorized: true
+, SNICallback: function (domainname, cb) {
+    // all domain requests will default to this HTTPS certificate
+    cb();
+  }
+, NPNProtcols: ['http/1.1', 'http/1.0']
+};
+
+var server = https.createServer(options);
+```
+
+### Caddy
+
+* TODO
+
 
 ## How this was created
 
